@@ -33,7 +33,7 @@
                     <navigationItem key="navigationItem" id="goz-JG-snX">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="2fn-fe-a4E">
                             <connections>
-                                <segue destination="Yva-NE-X1A" kind="show" id="g7a-QQ-UjB"/>
+                                <segue destination="Yva-NE-X1A" kind="show" identifier="juegoSegue" id="g7a-QQ-UjB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -74,6 +74,14 @@
                                     <action selector="agregarTapped:" destination="Yva-NE-X1A" eventType="touchUpInside" id="RbM-QA-mqM"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTL-n7-lmC">
+                                <rect key="frame" x="169" y="390" width="76" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Eliminar"/>
+                                <connections>
+                                    <action selector="eliminarTapped:" destination="Yva-NE-X1A" eventType="touchUpInside" id="nyX-QD-W9R"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7yQ-zn-kfy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -84,12 +92,15 @@
                             <constraint firstItem="AD6-6i-ojr" firstAttribute="top" secondItem="7yQ-zn-kfy" secondAttribute="top" constant="32" id="O7Q-Ni-oAd"/>
                             <constraint firstItem="aW9-10-buP" firstAttribute="top" secondItem="TsE-UZ-DxZ" secondAttribute="bottom" constant="20" id="P2T-3m-dhn"/>
                             <constraint firstItem="TsE-UZ-DxZ" firstAttribute="centerX" secondItem="AD6-6i-ojr" secondAttribute="centerX" id="aDR-A6-6GP"/>
+                            <constraint firstItem="VTL-n7-lmC" firstAttribute="top" secondItem="aW9-10-buP" secondAttribute="bottom" constant="15" id="aXm-q4-6JJ"/>
                             <constraint firstItem="aW9-10-buP" firstAttribute="centerX" secondItem="anF-BJ-ecg" secondAttribute="centerX" id="eGr-p9-wy8"/>
+                            <constraint firstItem="VTL-n7-lmC" firstAttribute="centerX" secondItem="anF-BJ-ecg" secondAttribute="centerX" id="fUl-do-jaB"/>
                             <constraint firstItem="TsE-UZ-DxZ" firstAttribute="centerX" secondItem="anF-BJ-ecg" secondAttribute="centerX" id="hhB-nt-BJv"/>
                             <constraint firstItem="AD6-6i-ojr" firstAttribute="centerX" secondItem="7yQ-zn-kfy" secondAttribute="centerX" id="pRc-hn-yWs"/>
                             <constraint firstItem="AD6-6i-ojr" firstAttribute="top" secondItem="7yQ-zn-kfy" secondAttribute="top" constant="32" id="sSx-vE-NT3"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="lUv-U4-iFz">
                         <rightBarButtonItems>
                             <barButtonItem systemItem="camera" id="0Sg-AI-o3j">
@@ -104,7 +115,10 @@
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="agregarActualizarBoton" destination="aW9-10-buP" id="bac-31-gyl"/>
+                        <outlet property="eliminarBoton" destination="VTL-n7-lmC" id="OUl-fN-8BP"/>
                         <outlet property="imageView" destination="AD6-6i-ojr" id="q5Z-uz-zAT"/>
                         <outlet property="tituloTextField" destination="TsE-UZ-DxZ" id="UWy-rB-9oU"/>
                     </connections>
